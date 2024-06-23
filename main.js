@@ -23,9 +23,9 @@ longBreak.value=15;
 
 let input=focusTime.value;
 
-const whiteNoise=new Audio('./public/whitenoise.mp3')
+// const whiteNoise=new Audio('./public/whitenoise.mp3')
 
-const timesUp=new Audio('./public/notification.mp3')
+// const timesUp=new Audio('./public/notification.mp3')
 
 focusTimeBtn.addEventListener('click',(e)=>{
   input=focusTime.value;
@@ -47,8 +47,8 @@ timerDisplay.innerHTML=`${input}:00`
 const startCount=(input)=>{
   let min=input;
   let count=min*60;
-  whiteNoise.loop=true;
-  whiteNoise.play();
+  // whiteNoise.loop=true;
+  // whiteNoise.play();
   timer=setInterval(()=>{
     let minutes=Math.floor(count/60);
     let secs=count%60;
@@ -56,8 +56,8 @@ const startCount=(input)=>{
     timerDisplay.innerHTML=`${minutes}:${secs}`;
     count--
     if(count<0){
-      whiteNoise.pause()
-      timesUp.play()
+      // whiteNoise.pause()
+      // timesUp.play()
       clearInterval(timer)
     };
   },1000)
@@ -69,7 +69,8 @@ const startCount=(input)=>{
 settings.addEventListener('click',()=>{
   clearInterval(timer)
   start.innerHTML="Start"
-  whiteNoise.pause();
+  timerDisplay.innerHTML=`${focusTime.value}:00`
+  // whiteNoise.pause();
   settingsPopup.style.display="flex"
 })
 cross.addEventListener('click',()=>{
@@ -99,7 +100,7 @@ start.addEventListener('click',(e)=>{
   else{
     start.innerHTML="Start"
     clearInterval(timer)
-    whiteNoise.pause()
+    // whiteNoise.pause()
     timerDisplay.innerHTML=`${input}:00`
   }
   }
@@ -108,7 +109,7 @@ start.addEventListener('click',(e)=>{
 //Reset
 restart.addEventListener('click',(e)=>{
   clearInterval(timer)
-  whiteNoise.pause()
+  // whiteNoise.pause()
   start.innerHTML="Start" 
   timerDisplay.innerHTML=`${focusTime.value}:00`
 })
