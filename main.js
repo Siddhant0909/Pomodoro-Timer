@@ -23,9 +23,9 @@ longBreak.value=15;
 
 let input=focusTime.value;
 
-const whiteNoise=new Audio('./audio/whitenoise.mp3')
+const whiteNoise=new Audio('./public/whitenoise.mp3')
 
-const timesUp=new Audio('./audio/notification.mp3')
+const timesUp=new Audio('./public/notification.mp3')
 
 focusTimeBtn.addEventListener('click',(e)=>{
   input=focusTime.value;
