@@ -23,10 +23,10 @@ longBreak.value=15;
 
 let input=focusTime.value;
 
-const whiteNoise=new Audio('./assets/testsong.mp3')
+// const whiteNoise=new Audio('./assets/whitenoise.mp3')
 // const timesUp=new Audio('./assets/notification.mp3')
 
-// const whiteNoise=document.querySelector('#white-noise')
+const whiteNoise=document.querySelector('#white-noise')
 
 
 const timesUp=document.querySelector('#notification')
