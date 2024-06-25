@@ -23,9 +23,9 @@ longBreak.value=15;
 
 let input=focusTime.value;
 
-const whiteNoise=new Audio('./assets/whitenoise.mp3')
+const whiteNoise=new Audio('https://github.com/Siddhant0909/Pomodoro-Timer/blob/main/assets/whitenoise.mp3')
 
-const timesUp=new Audio('./assets/notification.mp3')
+const timesUp=new Audio('https://github.com/Siddhant0909/Pomodoro-Timer/blob/main/assets/notification.mp3')
 
 focusTimeBtn.addEventListener('click',(e)=>{
   input=focusTime.value;
